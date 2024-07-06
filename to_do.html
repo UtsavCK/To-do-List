@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="to_do.css">
+</head>
+<body>
+    <center>
+        <div id="container">
+            <h1>To-do List</h1>
+            <form id="myForm">
+                
+                <div class="msg"></div>
+                <label for="task">Task <span id="taskNumber"></span> :</label><br>
+                <input type="text" id="task" name="task">
+                <br>
+                <div id="buttons">
+                    <button type="submit">Add Task</button>
+                    <button type="reset">Clear Tasks</button>
+                </div>
+            </form>
+            <br><hr>
+            <h2><em>My Tasks:</em></h2>
+            
+            <ul id="users"></ul>
+            
+            
+        </div>
+    </center>
+    <script src="to_do.js"></script>
+</body>
+</html>
