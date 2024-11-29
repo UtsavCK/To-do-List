@@ -4,12 +4,17 @@ body{
     padding: 5%;
     font-family: 'Arial', sans-serif;
     color: #2d3e50; /* Neutral dark text */
+    min-width: fit-content;
 }
 
 h1{
     text-align: center;
     text-decoration: underline;
-    color: #4267b2; /* Deep purple-blue for headers */
+    color: #2D3E50; /* Deep purple-blue for headers */
+}
+
+#users {
+    transition: height 0.3s ease; /* Smooth transition for container height */
 }
 
 #container{
@@ -66,17 +71,50 @@ ul{
 }
 
 li{
+    position: relative;
     background-color: #fff5e6; /* Soft peach for task items */
     border: 1px solid #ffdab3; /* Muted orange border */
     border-radius: 5px;
     margin: 5px 0;
-    padding: 10px;
+    padding: 10px 40px 10px 10px;
     font-size: 1rem;
     color: #2d3e50;
+}
+
+li.strikethrough {
+    text-decoration: line-through; /* Apply strikethrough effect */
+    opacity: 0.5; /* Fade out the task */
+    transform: scale(0.95); /* Slightly shrink the element */
 }
 
 .msg{
     color: #d9534f; /* Bright red for error messages */
     font-size: 0.9rem;
     margin: 0;
+}
+
+.delete-btn {
+    position: absolute;
+    background-color: #d9534f; /* Bright red */
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Circular button */
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+    right: 10px; /* Align to the right */
+    top: 50%;
+    transform: translateY(-50%); /* Exact vertical centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for visibility */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c; /* Darker red for hover */
+    transform: translateY(-50%) scale(1.1); /* Hover effect: scaling without affecting the inner 'X' */
 }
