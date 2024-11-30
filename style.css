@@ -13,6 +13,10 @@ h1{
     color: #2D3E50; /* Deep purple-blue for headers */
 }
 
+h2 {
+    display: none; /* Initially hide the "My Tasks" header */
+}
+
 #users {
     transition: height 0.3s ease; /* Smooth transition for container height */
 }
